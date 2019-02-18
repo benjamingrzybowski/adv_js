@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+
+        fetch('https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/2487956/')
+        .then(result => console.log(result))
+        .catch(error => console.log(error));
+
+        fetch('https://crossorigin.me//https://www.metaweather.com/api/location/2487956/')
+        .then(result => console.log(result))
+        .catch(error => console.log(error));
+                
+        //const getIds = new Promise((resolve, reject) => {
+        //    setTimeout(() => {
+        //        resolve([21,23,45,67]);
+        //    }, 1500)
+        //});
+//
+        //const getRecipe = recId => {
+        //    return new Promise((resolve, reject) => {
+        //        setTimeout(id => {
+        //            const recipe = {title: 'pasta', publisher: 'ben'};
+        //            resolve(`${id} : ${recipe.title}`);
+        //        }, 1500, recId);
+        //    });
+        //};
+//
+        //const getRelated = (publisher) => {
+        //    return new Promise((resolve, reject) => {
+        //        setTimeout(pub => {
+        //            const recipe = {title: 'pasta roni', publisher: 'ben'};
+        //            resolve(`${pub} : ${recipe.title}`);
+        //        }, 1500, publisher)
+        //    })
+        //}
+//
+        //async function getRecipesAW() {
+        //    const ids = await getIds;
+        //    console.log(ids);
+        //    const recipe = await getRecipe(ids[3]); 
+        //    console.log(recipe);
+        //    const related = await getRelated('ben');
+        //    console.log(related);
+//
+        //    return recipe; 
+        //}
+        //getRecipesAW().then(result => {
+        //    console.log(`${result} is the best`);
+        //});
+
+        //getIds
+        //.then((ids) => {
+        //    console.log(ids);
+        //    return getRecipe(ids[3]);
+        //})
+        //.then(recipe => {
+        //    console.log(recipe);
+        //    return getRelated('ben');
+        //})
+        //.then(recipe => {
+        //    console.log(recipe);
+        //})
+        //.catch(error => {
+        //    console.log(error);
+        //});
+
+        
+
+        //    function getRecipe() {
+        //        setTimeout(() => {
+        //            const recipeID = [21,23,45,67];
+        //            console.log(recipeID);
+//
+        //            setTimeout((id) => {
+        //                const recipe = {title: 'pasta', publisher: 'ben'};
+        //                console.log(`${id} : ${recipe.title}`);
+//
+        //                setTimeout(publisher => {
+        //                    const recipe2 = {title: 'zzza', publisher: "johnny"};
+        //                    console.log(recipe);
+        //                }, 1500, recipe.publisher);
+//
+        //            }, 1000, recipeID[2]);
+//
+        //        }, 1500)
+        //    }
+        //    getRecipe();
+
+
+            
+        //    const second = () => {
+        //        setTimeout(()=> {
+        //            console.log('async fuck me');
+        //        }, 2000);
+        //    }
+//
+        //   const first = () => {
+        //       console.log('fuck');
+        //       second();
+        //       console.log('titties');
+        //   }
+//
+        //   first();
+        
+        </script>
+    </body>
+</html>

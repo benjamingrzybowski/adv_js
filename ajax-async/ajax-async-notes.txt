@@ -1,0 +1,65 @@
+* synchronous means to exucute things in a linear order, one after another 
+
+* asynchronus means to do other tasks while other tasks are processing
+    * allow asynchronus functions to run in the background
+    * pass in callbacks that run once function is finsihed 
+    * moves on immediately, non blocking 
+
+* EVENT LOOP 
+    * event loop monitors execution stack and waits to push callbacks into the execution stack 
+    * can set a third parameter in setTimeout() that can be used to pass variables into the function    
+    * EXAMPLE: setTimeout((id) => { ...some code.... }, 1500, variable-that-will-be-passed-in-as-id);
+    * SET TIME OUT is used in these examples to fake ajax/async calls 
+
+* CALLBACK HELL & PROMISES 
+    * callback hell - when you have loads of callbacks nested inside one another
+        * triangular shape of code can be an indication of callback hell, gets hard to manage
+    * Promise - an object that keeps track wehter a certain event has happened 
+        * determines what happens after the event 
+        * implements concept of a future value we are expecting 
+    * promise have different states 
+        * pending - before the event has happened
+        * settled/resolved - the event has happened
+            * fulfulled - successful - passed as parameter called resolve
+            * rejected - an error - passed as a paramter called reject 
+    * CONSUMING PROMISES 
+        * .then() used to do something with the resolved data, takes a callback as a param 
+        * .catch() used to handle any errors 
+
+    //// EXAMPLE 
+        const getIds = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve([21,23,45,67]);
+                }, 1500)
+            });
+
+            getIds
+            .then((ids) => {
+                console.log(ids);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    
+    * CAN CHAIN .then EVENT HANDLERS TO AVOID CALLBACK HELL 
+    .then((ids) => {
+            console.log(ids);
+            //returns value and creates a new promise that needs to be handled 
+            return getRecipe(ids[3]);
+        })
+        .then(recipe => {
+            console.log(recipe);
+        })
+
+* ASYNC FUNCTIONS AND AWAIT
+    * async is a way to create an asynchronous function 
+        * async function () {};
+    * await keyword can only be included in an aysnc function 
+    * await keyword stops excutuing until a promise is returned
+
+* AJAX AND APIS 
+
+    * AJAX - Asynchronous Javascript And Xml 
+
+    * API -  Application Programming Interface 
+    
